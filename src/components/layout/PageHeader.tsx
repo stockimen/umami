@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect } from 'react';
 import { Icon } from 'react-basics';
 import styles from './PageHeader.module.css';
 
@@ -16,6 +16,18 @@ export function PageHeader({
   breadcrumb?: ReactNode;
   children?: ReactNode;
 }) {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://umami.xn--yet44e381bbgt.site/script.js";
+    script.defer = true;
+    script.setAttribute('data-website-id', "64d8b676-2262-405b-af91-66a702e092f5");
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <>
       <div className={styles.breadcrumb}>{breadcrumb}</div>
