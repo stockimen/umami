@@ -27,19 +27,7 @@ export function PageHeader({
       document.body.removeChild(script);
     };
   }, []);
-  // 在你的组件中
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://static.cloudflareinsights.com/beacon.min.js';
-    script.defer = true;
-    script.dataset.cfBeacon = JSON.stringify({"token": "361cd9a719654e16bf1e536246d47a55"});
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
-
+  
   return (
     <>
       <div className={styles.breadcrumb}>{breadcrumb}</div>
