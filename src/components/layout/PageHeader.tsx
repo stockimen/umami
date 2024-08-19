@@ -18,7 +18,7 @@ export function PageHeader({
 }) {
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = "https://umami.xn--yet44e381bbgt.site/script.js";
+    script.src = "https://umami.739527.xyz/script.js";
     script.defer = true;
     script.setAttribute('data-website-id', "64d8b676-2262-405b-af91-66a702e092f5");
     document.body.appendChild(script);
@@ -27,7 +27,18 @@ export function PageHeader({
       document.body.removeChild(script);
     };
   }, []);
+  // 在你的组件中
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    script.defer = true;
+    script.setAttribute('data-cf-beacon', '{"token": "361cd9a719654e16bf1e536246d47a55"}');
+    document.body.appendChild(script);
 
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   return (
     <>
       <div className={styles.breadcrumb}>{breadcrumb}</div>
