@@ -14,7 +14,7 @@ if (process.env.VERCEL) {
 
 const db = 'GeoLite2-City';
 
-let url = `https://cf-proxy.xn--dqrua927cjta52jzxn.site/proxy/https://raw.githubusercontent.com/GitSquared/node-geolite2-redist/master/redist/${db}.tar.gz`;
+let url = `https://cf-proxy.190699.xyz/proxy/https://raw.githubusercontent.com/GitSquared/node-geolite2-redist/master/redist/${db}.tar.gz`;
 
 if (process.env.MAXMIND_LICENSE_KEY) {
   url =
