@@ -14,11 +14,11 @@ if (process.env.VERCEL) {
 
 const db = 'GeoLite2-City';
 
-let url = `https://cf-proxy.190699.xyz/proxy/https://raw.githubusercontent.com/GitSquared/node-geolite2-redist/master/redist/${db}.tar.gz`;
+let url = `https://vercel-pro.xn--dqrua927cjta52jzxn.site/proxy/raw.githubusercontent.com/GitSquared/node-geolite2-redist/master/redist/${db}.tar.gz`;
 
 if (process.env.MAXMIND_LICENSE_KEY) {
   url =
-    `https://download.maxmind.com/app/geoip_download` +
+    `https://vercel-pro.xn--dqrua927cjta52jzxn.site/proxy/download.maxmind.com/app/geoip_download` +
     `?edition_id=${db}&license_key=${process.env.MAXMIND_LICENSE_KEY}&suffix=tar.gz`;
 }
 
